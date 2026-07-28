@@ -1,11 +1,12 @@
 body {
-    font-family: 'Georgia', serif; /* Un peu plus médiéval */
+    font-family: 'Georgia', serif;
     margin: 0;
     background-color: #2b2b2b;
     color: #e0e0e0;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
 }
 
 #top-bar {
@@ -15,45 +16,42 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #8b4513;
-    flex-wrap: wrap;
+    z-index: 10;
 }
 
-#title {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #ffd700;
-    text-shadow: 1px 1px 2px black;
-}
-
+#title { font-size: 1.4em; font-weight: bold; color: #ffd700; text-shadow: 1px 1px 2px black; }
 #resources span { margin-left: 15px; font-weight: bold; font-size: 1em; }
 #unification-box { display: flex; align-items: center; gap: 10px; font-size: 0.9em;}
 #unification-bar { width: 100px; }
 
 #main-container { display: flex; flex: 1; overflow: hidden; }
-#map-panel { flex: 2; background-color: #3a5f3a; padding: 20px; display: flex; justify-content: center; align-items: center; }
+#map-panel { flex: 3; background-color: #3a5f3a; padding: 20px; display: flex; justify-content: center; align-items: center; }
 #map { width: 100%; height: 100%; background-color: #4a7a4a; border: 2px solid #000; border-radius: 5px; }
 
-.province { stroke: #000; stroke-width: 1; cursor: pointer; transition: fill 0.3s; }
-.province:hover { fill-opacity: 0.7; stroke-width: 2; stroke: #fff; }
+.province { stroke: #000; stroke-width: 1; cursor: pointer; transition: fill 0.3s; fill-opacity: 0.8; }
+.province:hover { fill-opacity: 1; stroke-width: 3; stroke: #fff; }
 
-#side-panel { flex: 1; display: flex; flex-direction: column; background-color: #222; border-left: 3px solid #8b4513; }
+#side-panel { flex: 1; display: flex; flex-direction: column; background-color: #222; border-left: 3px solid #8b4513; min-width: 300px; }
 #info-panel { padding: 15px; border-bottom: 2px solid #8b4513; flex: 1; overflow-y: auto;}
-#log-panel { padding: 15px; height: 200px; overflow-y: auto; background: #1a1a1a; }
+#log-panel { padding: 15px; height: 250px; overflow-y: auto; background: #1a1a1a; }
 #log-content { font-size: 0.85em; color: #aaa; }
-#log-content p { margin: 2px 0; border-bottom: 1px solid #333; padding-bottom: 2px; }
+#log-content p { margin: 4px 0; border-bottom: 1px solid #333; padding-bottom: 2px; }
 
-.char-card { background: #333; padding: 10px; margin-bottom: 8px; border: 1px solid #555; cursor: pointer; border-radius: 4px; }
-.char-card:hover { border-color: #ffd700; background: #3a3a3a; }
+.action-btn { background-color: #8b4513; color: white; border: none; padding: 10px; margin: 5px 0; cursor: pointer; border-radius: 4px; width: 100%; font-family: inherit; font-size: 1em; text-align: left; }
+.action-btn:hover:not(:disabled) { background-color: #a0522d; }
+.action-btn:disabled { background-color: #555; color: #888; cursor: not-allowed; }
+.action-btn.secondary { background-color: #444; }
 
-.action-btn { background-color: #8b4513; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer; border-radius: 4px; width: 90%; font-family: inherit; font-size: 1em; }
-.action-btn:hover { background-color: #a0522d; }
-.action-btn.secondary { background-color: #555; }
-.action-btn:disabled { background-color: #333; color: #777; cursor: not-allowed; }
-
-.btn-control { background-color: #555; color: white; border: 1px solid #777; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 1.2em; }
+.btn-control { background-color: #555; color: white; border: 1px solid #777; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 1em; }
 .btn-control:hover { background-color: #777; }
 
 #event-popup { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #f4e4c1; color: #222; padding: 20px; border: 4px solid #8b4513; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.9); z-index: 100; width: 350px; text-align: center; }
 #event-choices { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+#event-choices button { background: #8b4513; color: white; border: none; padding: 8px; cursor: pointer; border-radius: 4px; font-family: inherit; }
+#event-choices button:hover { background: #a0522d; }
+
+#game-over-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); color: #8b0000; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; text-align: center; }
+#game-over-screen h1 { font-size: 4em; margin-bottom: 10px; }
+#game-over-screen button { margin-top: 20px; padding: 10px 20px; font-size: 1.2em; cursor: pointer; }
 
 #marriage-modal { background: #333; padding: 15px; border: 1px solid #8b4513; margin-top: 10px; border-radius: 5px; }
