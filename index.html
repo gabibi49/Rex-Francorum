@@ -28,26 +28,38 @@
 
     <div id="main-container">
         <div id="map-panel">
+            <!-- LA NOUVELLE CARTE RÉALISTE -->
             <svg id="map" viewBox="0 0 600 600">
-                <!-- Carte de France stylisée V3 -->
-                <path id="prov-1" class="province" d="M280,230 L320,210 L340,240 L320,280 Z"/> <!-- Ile-de-France -->
-                <path id="prov-2" class="province" d="M240,160 L320,210 L280,230 L220,220 Z"/> <!-- Normandie -->
-                <path id="prov-3" class="province" d="M140,210 L220,220 L240,160 L180,170 L120,200 Z"/> <!-- Bretagne -->
-                <path id="prov-4" class="province" d="M340,240 L420,210 L440,260 L380,280 Z"/> <!-- Champagne -->
-                <path id="prov-5" class="province" d="M320,100 L420,120 L420,210 L340,240 L320,210 Z"/> <!-- Flandre -->
-                <path id="prov-6" class="province" d="M140,300 L280,300 L300,400 L160,400 Z"/> <!-- Aquitaine -->
-                <path id="prov-7" class="province" d="M380,280 L440,260 L460,340 L400,360 L360,320 Z"/> <!-- Bourgogne -->
-                <path id="prov-8" class="province" d="M160,400 L300,400 L320,480 L200,490 Z"/> <!-- Toulouse -->
-                <path id="prov-9" class="province" d="M280,230 L320,280 L380,280 L360,320 L300,310 L260,290 Z"/> <!-- Orléanais -->
-                <path id="prov-10" class="province" d="M220,220 L280,230 L260,290 L200,280 Z"/> <!-- Anjou -->
-                <path id="prov-11" class="province" d="M140,300 L200,280 L220,220 L140,210 Z"/> <!-- Poitou -->
-                <path id="prov-12" class="province" d="M440,260 L500,280 L510,380 L460,340 Z"/> <!-- Dauphiné -->
+                <!-- Bretagne -->
+                <path id="prov-3" class="province" d="M70,170 Q80,150 110,130 Q140,130 160,150 Q170,170 150,200 Q120,220 80,210 Z"/>
+                <!-- Normandie -->
+                <path id="prov-2" class="province" d="M160,150 Q200,120 240,110 Q270,120 280,140 L220,160 Q180,180 150,200 Z"/>
+                <!-- Flandre -->
+                <path id="prov-5" class="province" d="M280,80 Q320,70 360,80 Q370,110 350,140 L280,140 Q260,120 270,90 Z"/>
+                <!-- Ile-de-France -->
+                <path id="prov-1" class="province" d="M220,160 L280,140 L290,180 L260,220 L220,210 Z"/>
+                <!-- Champagne -->
+                <path id="prov-4" class="province" d="M290,180 L350,140 L400,160 L380,220 L320,240 Z"/>
+                <!-- Anjou -->
+                <path id="prov-10" class="province" d="M150,200 L220,210 L230,260 L170,270 L120,240 Z"/>
+                <!-- Orléanais -->
+                <path id="prov-9" class="province" d="M220,210 L260,220 L320,240 L290,280 L230,260 Z"/>
+                <!-- Poitou -->
+                <path id="prov-11" class="province" d="M120,240 L170,270 L190,310 L140,340 L100,310 Z"/>
+                <!-- Aquitaine -->
+                <path id="prov-6" class="province" d="M140,340 L190,310 L250,330 L280,370 L240,420 L170,420 Z"/>
+                <!-- Bourgogne -->
+                <path id="prov-7" class="province" d="M320,240 L380,220 L430,260 L420,320 L360,330 L290,280 Z"/>
+                <!-- Dauphiné -->
+                <path id="prov-12" class="province" d="M430,260 L480,290 L500,350 L450,370 L420,320 Z"/>
+                <!-- Toulouse -->
+                <path id="prov-8" class="province" d="M240,420 L280,370 L360,330 L380,400 L320,460 L260,470 Z"/>
             </svg>
         </div>
 
         <div id="side-panel">
             <div id="info-panel">
-                <h2 id="panel-title">Personnage Sélectionné</h2>
+                <h2 id="panel-title">Personnage</h2>
                 <div id="char-info">Cliquez sur une province</div>
                 
                 <div id="actions" style="display: none;">
