@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rex Francorum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="top-bar">
+        <div id="title">👑 REX FRANCORUM 👑</div>
+        <div id="date">1 Janvier 1066</div>
+        <div id="resources">
+            <span>💰 Or: <span id="gold">100</span></span>
+            <span>⚔️ Troupes: <span id="troops">0</span></span>
+            <span>👑 Prestige: <span id="prestige">0</span></span>
+        </div>
+        <div id="unification-box">
+            Unification: <progress id="unification-bar" max="100" value="0"></progress> <span id="unification-pct">0%</span>
+        </div>
+        <div id="controls">
+            <button id="btn-pause" class="btn-control">⏸️</button>
+            <button id="btn-play" class="btn-control">▶️</button>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div id="map-panel">
+            <svg id="map" viewBox="0 0 500 500"></svg>
+        </div>
+
+        <div id="side-panel">
+            <div id="info-panel">
+                <h2>Personnage Sélectionné</h2>
+                <div id="char-info">Cliquez sur une province ou un personnage</div>
+                
+                <div id="actions" style="display: none;">
+                    <h3>Actions Royales</h3>
+                    <button id="btn-marry" class="action-btn">💒 Se Marier</button>
+                    <button id="btn-raise-army" class="action-btn">⚔️ Lever l'armée</button>
+                    <button id="btn-claim" class="action-btn" style="display:none;">🛡️ Revendiquer & Guerroyer</button>
+                </div>
+
+                <div id="marriage-modal" style="display: none;">
+                    <h3>Choisir une épouse</h3>
+                    <div id="spouse-list"></div>
+                    <button id="btn-auto-marry" class="action-btn">Rechercher automatiquement</button>
+                    <button id="btn-close-modal" class="action-btn secondary">Annuler</button>
+                </div>
+            </div>
+
+            <div id="log-panel">
+                <h3>Chroniques du Royaume</h3>
+                <div id="log-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="event-popup" style="display: none;">
+        <h3 id="event-title">Événement</h3>
+        <p id="event-desc"></p>
+        <div id="event-choices"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
