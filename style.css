@@ -31,7 +31,7 @@ body {
 .province { stroke: #000; stroke-width: 1; cursor: pointer; transition: fill 0.3s; fill-opacity: 0.9; }
 .province:hover { fill-opacity: 1; stroke-width: 3; stroke: #fff; }
 
-#side-panel { flex: 1; display: flex; flex-direction: column; background-color: #222; border-left: 3px solid #8b4513; min-width: 320px; }
+#side-panel { flex: 1; display: flex; flex-direction: column; background-color: #222; border-left: 3px solid #8b4513; min-width: 340px; }
 #info-panel { padding: 15px; border-bottom: 2px solid #8b4513; flex: 1; overflow-y: auto;}
 #log-panel { padding: 15px; height: 250px; overflow-y: auto; background: #1a1a1a; }
 #log-content { font-size: 0.85em; color: #aaa; }
@@ -57,3 +57,8 @@ body {
 #marriage-modal { background: #333; padding: 15px; border: 1px solid #8b4513; margin-top: 10px; border-radius: 5px; }
 .char-card { background: #444; padding: 8px; margin-bottom: 5px; border: 1px solid #666; cursor: pointer; border-radius: 4px; font-size: 0.9em; }
 .char-card:hover { border-color: #ffd700; background: #3a3a3a; }
+
+/* Nouveaux styles pour les détails */
+.detail-line { font-size: 0.85em; color: #aaa; margin-left: 10px; }
+.detail-positive { color: #2ecc71; }
+.detail-negative { color: #e74c3c; }
