@@ -1,0 +1,59 @@
+body {
+    font-family: 'Georgia', serif; /* Un peu plus médiéval */
+    margin: 0;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#top-bar {
+    background: linear-gradient(to bottom, #3a2a1a, #1a1a1a);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #8b4513;
+    flex-wrap: wrap;
+}
+
+#title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px black;
+}
+
+#resources span { margin-left: 15px; font-weight: bold; font-size: 1em; }
+#unification-box { display: flex; align-items: center; gap: 10px; font-size: 0.9em;}
+#unification-bar { width: 100px; }
+
+#main-container { display: flex; flex: 1; overflow: hidden; }
+#map-panel { flex: 2; background-color: #3a5f3a; padding: 20px; display: flex; justify-content: center; align-items: center; }
+#map { width: 100%; height: 100%; background-color: #4a7a4a; border: 2px solid #000; border-radius: 5px; }
+
+.province { stroke: #000; stroke-width: 1; cursor: pointer; transition: fill 0.3s; }
+.province:hover { fill-opacity: 0.7; stroke-width: 2; stroke: #fff; }
+
+#side-panel { flex: 1; display: flex; flex-direction: column; background-color: #222; border-left: 3px solid #8b4513; }
+#info-panel { padding: 15px; border-bottom: 2px solid #8b4513; flex: 1; overflow-y: auto;}
+#log-panel { padding: 15px; height: 200px; overflow-y: auto; background: #1a1a1a; }
+#log-content { font-size: 0.85em; color: #aaa; }
+#log-content p { margin: 2px 0; border-bottom: 1px solid #333; padding-bottom: 2px; }
+
+.char-card { background: #333; padding: 10px; margin-bottom: 8px; border: 1px solid #555; cursor: pointer; border-radius: 4px; }
+.char-card:hover { border-color: #ffd700; background: #3a3a3a; }
+
+.action-btn { background-color: #8b4513; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer; border-radius: 4px; width: 90%; font-family: inherit; font-size: 1em; }
+.action-btn:hover { background-color: #a0522d; }
+.action-btn.secondary { background-color: #555; }
+.action-btn:disabled { background-color: #333; color: #777; cursor: not-allowed; }
+
+.btn-control { background-color: #555; color: white; border: 1px solid #777; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 1.2em; }
+.btn-control:hover { background-color: #777; }
+
+#event-popup { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #f4e4c1; color: #222; padding: 20px; border: 4px solid #8b4513; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.9); z-index: 100; width: 350px; text-align: center; }
+#event-choices { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+
+#marriage-modal { background: #333; padding: 15px; border: 1px solid #8b4513; margin-top: 10px; border-radius: 5px; }
